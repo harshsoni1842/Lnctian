@@ -66,23 +66,7 @@ export const sendMessage = async (req, res) => {
         try{
         const {text, image} = req.body;
         const receiverId = req.params.id;
-        const senderId = req.user._id;
-    //
-        // const { text, image, receiverId: bodyReceiverId } = req.body;
-        
-        // // Check params ID as well as body ID as a fallback
-        // const receiverId = req.params.id || req.params.receiverId || bodyReceiverId; 
-        // const senderId = req.user._id;
-
-        // // Extra Debugging Check
-        // if (!receiverId || receiverId === "undefined") {
-        //     return res.status(400).json({ 
-        //         success: false, 
-        //         Message: "Receiver ID invalid or undefined on server" 
-        //     });
-        // }
-
-    //    
+        const senderId = req.user._id;   
         let imageUrl;
         if(image){
             const uploadResponse = await cloudinary.uploader.upload(image)
