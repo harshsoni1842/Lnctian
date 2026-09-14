@@ -1,0 +1,244 @@
+.ls {
+    background: #001030;
+    color: white;
+    height: 75vh;
+}
+
+.ls-top {
+    padding: 20px;
+}
+
+.ls-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ls-nav .logo {
+    max-width: 140px;
+}
+
+.ls-nav .menu img {
+    max-height: 20px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.ls-nav .menu {
+    position: relative;
+    padding: 10px 0;
+}
+
+.menu .sub-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 130px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    display: none;
+}
+
+.sub-menu hr{
+    border: none;
+    height: 1px;
+    background: #a4a4a4;
+    margin: 8px 0;
+}
+.sub-menu p{
+    cursor: pointer;
+    font-size: 14px;
+}
+.menu:hover .sub-menu {
+    display: block;
+}
+
+.ls-search {
+    background-color: #002670;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    margin-top: 20px;
+}
+
+.ls-search img {
+    width: 16px;
+}
+
+.ls-search input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 11px;
+}
+
+.ls-search input::placeholder {
+    color: #c8c8c8;
+}
+
+.ls-list {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    overflow-y: scroll;
+}
+
+.friends {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.friends img {
+    width: 35px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.friends div {
+    display: flex;
+    flex-direction: column;
+}
+
+.friends span {
+    color: #9f9f9f;
+    font-size: 11px;
+}
+
+.friends:hover {
+    background-color: #077EFF;
+}
+.friends:hover span {
+    color: white;
+}
+
+.add-user div {
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-user .add-icon {
+    width: 25px;
+}
+
+.friends.border img {
+    border: 3px solid #07fff3;
+}
+
+.friends.border div span {
+    color: #07fff3;
+}
+/* tailwind css */
+.user-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.user-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.user-card:hover {
+  background-color: rgba(40, 33, 66, 0.3);
+}
+
+.user-card.selected {
+  background-color: rgba(40, 33, 66, 0.8);
+  box-shadow: inset 0 0 0 1px rgba(139, 92, 246, 0.3);
+}
+
+.avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.status-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #0f172a;
+}
+
+.status-badge.online {
+  background-color: #10b981;
+}
+
+.status-badge.offline {
+  background-color: #737373;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.user-name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #f8fafc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.status-text {
+  font-size: 12px;
+}
+
+.status-text.online {
+  color: #34d399;
+}
+
+.status-text.offline {
+  color: #a3a3a3;
+}
+
+.unseen-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #7c3aed;
+  border-radius: 9999px;
+}
+@media (max-width:900px) {
+    .ls{
+        width: 100%;
+    }
+}
